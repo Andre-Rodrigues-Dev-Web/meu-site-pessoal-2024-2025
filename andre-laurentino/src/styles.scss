@@ -20,6 +20,25 @@ $tablet: 48em;
     height: auto;
     width: 100%;
   }
+  scrollbar-width: thin;
+  scrollbar-color: #333 #000;
+}
+//Scroll
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 //Grids
@@ -36,12 +55,6 @@ $column-width: 100%;
 
 @mixin grid-column($columns) {
   width: ($columns / $grid-columns) * $column-width;
-}
-
-@for $i from 1 through $grid-columns {
-  .col-#{$i} {
-    @include grid-column($i);
-  }
 }
 
 @media (width >= $tablet) {

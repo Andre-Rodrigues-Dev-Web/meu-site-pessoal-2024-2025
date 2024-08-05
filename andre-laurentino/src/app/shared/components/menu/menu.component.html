@@ -1,4 +1,4 @@
-<header class="menu" [ngClass]="{'background-menu': isMenuColored}" role="navigation" aria-label="Menu principal">
+<header class="menu" [ngClass]="{'color-menu': isMenuColored}" role="navigation" aria-label="Menu principal">
   <div class="menu-container">
     <div class="logo">
       <h1>
@@ -8,16 +8,24 @@
       </h1>
     </div>
     <div class="container-button">
-      <button aria-expanded="false" aria-controls="menu-links" aria-label="Alternar menu"></button>
+      <button
+        [attr.aria-expanded]="isMenuVisible ? 'true' : 'false'"
+        aria-controls="menu-links"
+        aria-label="Alternar menu"
+        (click)="toggleMenu()">
+        <span class="material-symbols-outlined">
+          menu
+        </span> Menu
+      </button>
     </div>
-    <nav class="container-links" id="menu-links">
+    <nav class="container-links" id="menu-links" [ngClass]="{'visible': isMenuVisible, 'hidden': !isMenuVisible}">
       <ul class="links">
-        <li><a routerLink="/" aria-label="Ir para a página Home">Home</a></li>
-        <li><a routerLink="/sobre-mim" aria-label="Saiba mais Sobre Mim">Sobre-mim</a></li>
-        <li><a routerLink="/servicos" aria-label="Ver os Serviços oferecidos">Serviços</a></li>
-        <li><a routerLink="/portfolio" aria-label="Ver meu Portfólio">Portfólio</a></li>
-        <li><a routerLink="/blog" aria-label="Ler o Blog">Blog</a></li>
-        <li><a routerLink="/contato" aria-label="Entre em Contato">Contato</a></li>
+        <li><a routerLink="/" routerLinkActive="active" aria-label="Ir para a página Home">Home</a></li>
+        <li><a routerLink="/sobre-mim" routerLinkActive="active" aria-label="Saiba mais Sobre Mim">Sobre-mim</a></li>
+        <li><a routerLink="/servicos" routerLinkActive="active" aria-label="Ver os Serviços oferecidos">Serviços</a></li>
+        <li><a routerLink="/portfolio" routerLinkActive="active" aria-label="Ver meu Portfólio">Portfólio</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active" aria-label="Ler o Blog">Blog</a></li>
+        <li><a routerLink="/contato" routerLinkActive="active" aria-label="Entre em Contato">Contato</a></li>
       </ul>
     </nav>
   </div>
