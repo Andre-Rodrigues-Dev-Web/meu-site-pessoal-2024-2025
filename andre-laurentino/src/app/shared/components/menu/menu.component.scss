@@ -1,11 +1,16 @@
 $desktop: 60em;
 
 .menu{
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
   &-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
     .logo{
       h1{
         a{
@@ -29,6 +34,7 @@ $desktop: 60em;
         h1{
           a{
             color: #fff;
+            cursor: pointer;
             font-size: 2em;
             font-weight: 800;
           }
@@ -45,6 +51,7 @@ $desktop: 60em;
           li{
             a{
               color: #fff;
+              cursor: pointer;
               font-size: 0.76em;
               font-weight: 600;
             }

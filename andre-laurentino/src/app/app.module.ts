@@ -9,15 +9,23 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { AgendaComponent } from './views/agenda/agenda.component';
 import { ContatoComponent } from './views/contato/contato.component';
 import { SharedModule } from "./shared/shared.module";
+import { ErroPageComponent } from './views/erro-page/erro-page.component';
+import { SobreMimComponent } from './views/sobre-mim/sobre-mim.component';
+
+const sharedPages = [
+  HomeComponent,
+  BlogComponent,
+  PortfolioComponent,
+  AgendaComponent,
+  ContatoComponent,
+  ErroPageComponent
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    BlogComponent,
-    PortfolioComponent,
-    AgendaComponent,
-    ContatoComponent
+    ...sharedPages,
+    SobreMimComponent
   ],
   imports: [
     BrowserModule,

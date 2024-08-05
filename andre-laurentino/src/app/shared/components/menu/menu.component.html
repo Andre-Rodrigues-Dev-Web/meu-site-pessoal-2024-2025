@@ -1,4 +1,4 @@
-<header class="menu" role="navigation" aria-label="Menu principal">
+<header class="menu" [ngClass]="{'background-menu': isMenuColored}" role="navigation" aria-label="Menu principal">
   <div class="menu-container">
     <div class="logo">
       <h1>
@@ -12,7 +12,7 @@
     </div>
     <nav class="container-links" id="menu-links">
       <ul class="links">
-        <li><a routerLink="/home" aria-label="Ir para a página Home">Home</a></li>
+        <li><a routerLink="/" aria-label="Ir para a página Home">Home</a></li>
         <li><a routerLink="/sobre-mim" aria-label="Saiba mais Sobre Mim">Sobre-mim</a></li>
         <li><a routerLink="/servicos" aria-label="Ver os Serviços oferecidos">Serviços</a></li>
         <li><a routerLink="/portfolio" aria-label="Ver meu Portfólio">Portfólio</a></li>
