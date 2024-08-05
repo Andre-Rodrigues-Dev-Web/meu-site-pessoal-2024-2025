@@ -28,7 +28,7 @@ const sharedPages = [
     SobreMimComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule
 ],
