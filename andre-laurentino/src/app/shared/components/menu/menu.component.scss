@@ -1,38 +1,85 @@
 $desktop: 60em;
 
-.menu{
+.menu {
   background-color: transparent;
+  position: fixed;
   transition: background-color 0.3s ease;
+  width: 100%;
   z-index: 1000;
-  &-container{
+  &-container {
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    .logo{
-      h1{
-        a{
-          color: #333;
-          font-size: 2em;
+    padding: 10px;
+    .logo {
+      h1 {
+        a {
+          color: #fff;
+          font-size: 25px;
         }
       }
     }
-    .container-button{
+    .container-button {
       display: block;
-    }
-    .container-links{
-      display: none;
-      .links{
+      button {
+        background-color: #ffeb3b;
+        border: none;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
+        gap: 3px;
+        font-size: 18px;
+        font-weight: 600;
+        outline: none;
+        padding: 7px 10px;
+        span {
+          display: block;
+        }
       }
     }
-    @media(width >= $desktop){
-      .logo{
-        h1{
-          a{
+    .container-links {
+      .links {
+        display: flex;
+        flex-direction: column;
+        li {
+          a {
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.86em;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    @media (max-width: 962px) {
+      .container-links {
+        &.hidden {
+          display: none;
+        }
+        &.visible {
+          background-color: #000;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 4em;
+          width: 100%;
+        }
+        .links {
+          li {
+            padding: 1em;
+            a {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
+    @media (width >= $desktop) {
+      padding: 10px 20px;
+      .logo {
+        h1 {
+          a {
             color: #fff;
             cursor: pointer;
             font-size: 2em;
@@ -40,20 +87,34 @@ $desktop: 60em;
           }
         }
       }
-      .container-button{
+      .container-button {
         display: none;
       }
-      .container-links{
+      .container-links {
         display: block;
-        .links{
+        position: relative !important;
+        .links {
           flex-direction: row;
           gap: 2em;
-          li{
-            a{
-              color: #fff;
-              cursor: pointer;
-              font-size: 0.76em;
-              font-weight: 600;
+        }
+      }
+    }
+  }
+  &.color-menu {
+    background-color: #000;
+    .menu-container {
+      .logo {
+        h1 {
+          a {
+            font-size: 2em;
+          }
+        }
+      }
+      @media (width >= $desktop) {
+        .logo {
+          h1 {
+            a {
+              font-size: 1.4em;
             }
           }
         }

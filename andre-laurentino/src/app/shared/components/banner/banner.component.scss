@@ -4,10 +4,26 @@ $desktop: 60em;
   .container{
     color: #fff;
     padding: 4em 0;
+    .row{
+      flex-direction: column-reverse;
+    }
+    h2{
+      font-size: 3em;
+      line-height: 0.9em;
+    }
+    h3{
+      font-size: 1.4em;
+      line-height: 1.3em;
+      margin-top: 0.76em;
+    }
+    img{
+      width: 100%;
+    }
     @media(width >= $desktop){
       padding: 8em 0;
       .row{
         align-items: center;
+        flex-direction: row;
       }
       h2{
         font-size: 4em;
