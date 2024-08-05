@@ -1,3 +1,7 @@
+//Breakpoints
+$desktop: 60em;
+$tablet: 48em;
+//Reset
 *{
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
@@ -16,4 +20,57 @@
     height: auto;
     width: 100%;
   }
+}
+
+//Grids
+.container{
+  margin: 0 auto;
+  width: 99%;
+  @media(width >= $desktop){
+    width: 96%;
+  }
+}
+
+$grid-columns: 12;
+$column-width: 100%;
+
+@mixin grid-column($columns) {
+  width: ($columns / $grid-columns) * $column-width;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include grid-column($i);
+  }
+}
+
+@media (width >= $tablet) {
+  @for $i from 1 through $grid-columns {
+    col-#{$i} {
+      @include grid-column($i);
+    }
+  }
+}
+
+@media (width >= $desktop) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-column($i);
+    }
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media(width >= 768px){
+    flex-direction: row;
+  }
+}
+
+//Menu
+.background-menu {
+  background-color: #000!important;
+  z-index: 100;
 }

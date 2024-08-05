@@ -5,12 +5,21 @@ $desktop: 60em;
     color: #fff;
     padding: 4em 0;
     @media(width >= $desktop){
-      padding: 10em 0;
+      padding: 8em 0;
+      .row{
+        align-items: center;
+      }
       h2{
         font-size: 4em;
+        line-height: 0.9em;
       }
       h3{
         font-size: 2em;
+        line-height: 0.97em;
+        margin-top: 0.76em;
+      }
+      img{
+        width: 38.43em;
       }
     }
   }
