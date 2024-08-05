@@ -9,6 +9,7 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { AgendaComponent } from './views/agenda/agenda.component';
 import { ContatoComponent } from './views/contato/contato.component';
 import { SharedModule } from "./shared/shared.module";
+import { ErroPageComponent } from './views/erro-page/erro-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from "./shared/shared.module";
     BlogComponent,
     PortfolioComponent,
     AgendaComponent,
-    ContatoComponent
+    ContatoComponent,
+    ErroPageComponent
   ],
   imports: [
     BrowserModule,

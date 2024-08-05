@@ -1,0 +1,17 @@
+$desktop: 60em;
+
+.banner{
+  .container{
+    color: #fff;
+    padding: 4em 0;
+    @media(width >= $desktop){
+      padding: 10em 0;
+      h2{
+        font-size: 4em;
+      }
+      h3{
+        font-size: 2em;
+      }
+    }
+  }
+}
