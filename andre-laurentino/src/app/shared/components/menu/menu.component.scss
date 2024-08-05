@@ -1,0 +1,56 @@
+$desktop: 60em;
+
+.menu{
+  &-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    .logo{
+      h1{
+        a{
+          color: #333;
+          font-size: 2em;
+        }
+      }
+    }
+    .container-button{
+      display: block;
+    }
+    .container-links{
+      display: none;
+      .links{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @media(width >= $desktop){
+      .logo{
+        h1{
+          a{
+            color: #fff;
+            font-size: 2em;
+            font-weight: 800;
+          }
+        }
+      }
+      .container-button{
+        display: none;
+      }
+      .container-links{
+        display: block;
+        .links{
+          flex-direction: row;
+          gap: 2em;
+          li{
+            a{
+              color: #fff;
+              font-size: 0.76em;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
