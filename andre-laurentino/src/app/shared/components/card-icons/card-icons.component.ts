@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./card-icons.component.scss']
 })
 export class CardIconsComponent implements OnInit {
-  cards: Array<{ imageSrc: string, title: string, text: string }> = [];
+  cards: Array<{ imageSrc: string, title: string, text: string, backgroundColor: string }> = [];
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class CardIconsComponent implements OnInit {
   }
 
   loadCards(): void {
-    this.http.get<{ imageSrc: string, title: string, text: string }[]>('assets/data/cards.json')
+    this.http.get<{ imageSrc: string, title: string, text: string, backgroundColor: string }[]>('assets/data/cards.json')
       .subscribe(data => {
         this.cards = data;
       });

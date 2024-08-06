@@ -15,6 +15,11 @@
         width: 300px;
       }
     }
+    .container-text{
+      h2{
+        font-size: 2em;
+      }
+    }
   }
   @media(width >= 900px){
     .container{
@@ -29,8 +34,6 @@
         }
       }
       .container-text{
-        margin: 0 auto;
-        width: 70%;
         h2{
           font-size: 2em;
         }
