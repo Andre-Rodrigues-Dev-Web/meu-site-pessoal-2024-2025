@@ -2,7 +2,7 @@
   flex-wrap: nowrap;
   gap: 5px;
   @media(max-width: 700px){
-    gap: 10px;
+    gap: 18px;
   }
 }
 
@@ -73,7 +73,7 @@
 
   .card-content a {
     font-size: 0.8em;
-    padding: 0.5em 1.5em;
+    padding: 1.2em 1.5em;
   }
 
   .card-content h2 {
@@ -91,7 +91,7 @@
 
 @media (max-width: 480px) {
   .card {
-    border-radius: 0;
+    border-radius: 10px;
   }
 
   .card-content {
@@ -99,8 +99,10 @@
   }
 
   .card-content a {
-    font-size: 0.75em;
-    padding: 0.5em;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 2em;
   }
 
   .card-content h2 {
