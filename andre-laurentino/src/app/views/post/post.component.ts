@@ -39,7 +39,7 @@ export class PostComponent {
     let listItems: string[] = [];
     let formattedContent = '';
 
-    const lines = content.split('\n');
+    const lines = content.split('\n\n');
 
     for (const line of lines) {
       const prefix = Object.keys(headingMap).find(p => line.startsWith(p));
