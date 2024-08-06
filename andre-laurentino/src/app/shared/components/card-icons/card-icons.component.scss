@@ -6,7 +6,8 @@
   @media(min-width: 760px){
     flex-direction: row;
     margin: 0 auto;
-    width: 90%;
+    min-width: 1040px;
+    max-width: 1040px;
   }
 }
 .card {
