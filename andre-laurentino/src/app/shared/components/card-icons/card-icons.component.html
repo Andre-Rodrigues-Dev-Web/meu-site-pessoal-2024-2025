@@ -1,8 +1,8 @@
 <div class="card-row">
-  <div *ngFor="let card of cards" class="card">
+  <div *ngFor="let card of cards" class="card" [attr.aria-label]="card.title">
     <div class="card-inner">
       <div class="card-front">
-        <img [src]="card.imageSrc" alt="Card image" class="card-image"/>
+        <img [src]="card.imageSrc" alt="imagem de icone {{card.title}}" class="card-image"/>
       </div>
       <div class="card-back" [ngStyle]="{ 'background-color': card.backgroundColor }">
         <div class="card-title">{{ card.title }}</div>

@@ -46,7 +46,8 @@ $tablet: 48em;
   margin: 0 auto;
   width: 99%;
   @media(width >= $desktop){
-    width: 96%;
+    min-width: 1140px;
+    max-width: 1377px;
   }
 }
 
