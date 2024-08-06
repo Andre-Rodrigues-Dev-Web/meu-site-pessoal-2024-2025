@@ -44,7 +44,7 @@ $tablet: 48em;
 //Grids
 .container{
   margin: 0 auto;
-  padding: 1em;
+  padding: 0 1em;
   width: 99%;
   @media(width >= $desktop){
     min-width: 1140px;
