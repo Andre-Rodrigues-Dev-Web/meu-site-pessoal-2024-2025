@@ -12,6 +12,7 @@ import { SharedModule } from "./shared/shared.module";
 import { ErroPageComponent } from './views/erro-page/erro-page.component';
 import { SobreMimComponent } from './views/sobre-mim/sobre-mim.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './views/post/post.component';
 
 const sharedPages = [
   HomeComponent,
@@ -26,7 +27,8 @@ const sharedPages = [
   declarations: [
     AppComponent,
     ...sharedPages,
-    SobreMimComponent
+    SobreMimComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

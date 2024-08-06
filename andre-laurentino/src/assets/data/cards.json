@@ -15,9 +15,29 @@
     "backgroundColor": "#ffc107"
   },
   {
+    "imageSrc": "../../../assets/imgs/icons/sass.svg",
+    "title": "Sass",
+    "backgroundColor": "#f74683"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/typescript.svg",
+    "title": "TypeScript",
+    "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/purescript.png",
+    "title": "PureScript",
+    "backgroundColor": "#24282a"
+  },
+  {
     "imageSrc": "../../../assets/imgs/icons/react.svg",
     "title": "React",
     "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/nextjs.png",
+    "title": "NextJS",
+    "backgroundColor": "#3b909b"
   },
   {
     "imageSrc": "../../../assets/imgs/icons/angular.svg",
@@ -37,6 +57,66 @@
   {
     "imageSrc": "../../../assets/imgs/icons/nodejs.svg",
     "title": "NodeJS",
+    "backgroundColor": "#4caf50"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/php.png",
+    "title": "PHP",
+    "backgroundColor": "#673ab7"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/python.svg",
+    "title": "Python",
+    "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/c#.svg",
+    "title": "C#",
+    "backgroundColor": "#673ab7"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/dot-net-core.svg",
+    "title": ".Net",
+    "backgroundColor": "#673ab7"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/expo.svg",
+    "title": "React Native / Expo",
+    "backgroundColor": "#2b3740"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/mysql.svg",
+    "title": "MySQL",
+    "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/mongodb.svg",
+    "title": "MongoDB",
+    "backgroundColor": "#4caf50"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/git.svg",
+    "title": "Git",
+    "backgroundColor": "#f44336"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/aws.svg",
+    "title": "AWS",
+    "backgroundColor": "#293134"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/data-dog.png",
+    "title": "Data Dog",
+    "backgroundColor": "#673ab7"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/adobe-xd.svg",
+    "title": "AdobeXD",
+    "backgroundColor": "#f74683"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/figma.svg",
+    "title": "Figma",
     "backgroundColor": "#4caf50"
   }
 ]

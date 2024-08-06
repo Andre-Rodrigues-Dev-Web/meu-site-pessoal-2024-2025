@@ -3,7 +3,7 @@ $desktop: 60em;
 .banner{
   .container{
     color: #fff;
-    padding: 4em 0;
+    padding-top: 4em;
     .row{
       flex-direction: column-reverse;
     }
@@ -20,7 +20,7 @@ $desktop: 60em;
       width: 100%;
     }
     @media(width >= $desktop){
-      padding: 8em 0;
+      padding-top: 8em;
       .row{
         align-items: center;
         flex-direction: row;

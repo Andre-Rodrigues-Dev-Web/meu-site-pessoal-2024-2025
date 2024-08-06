@@ -1,0 +1,9 @@
+<section class="content-post" *ngIf="post">
+  <div class="post-image">
+    <img [src]="post.image" alt="{{ post.title }}" />
+  </div>
+  <h1>{{ post.title }}</h1>
+  <h3>Categoria: {{ post.category }}</h3>
+  <span>Data da postagem: {{ post.dataPublish }}</span>
+  <div class="content-text" [innerHTML]="formattedContent"></div>
+</section>

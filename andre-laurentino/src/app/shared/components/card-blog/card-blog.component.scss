@@ -1,0 +1,114 @@
+.row{
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+//Card
+.card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  color: #fff;
+  padding: 1.5em;
+}
+
+.card-content a {
+  background-color: #ffc107;
+  border-radius: 5px;
+  color: #333;
+  display: inline-block;
+  font-size: 0.87em;
+  font-weight: 600;
+  outline: none;
+  margin-top: 10px;
+  padding: 0.76em 2em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+  background-color: #e0a800;
+}
+
+.card-content h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-content h3 {
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+.card-content h4 {
+  font-size: 0.87em;
+  margin: 0.5em 0;
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    padding: 1em;
+  }
+
+  .card-content a {
+    font-size: 0.8em;
+    padding: 0.5em 1.5em;
+  }
+
+  .card-content h2 {
+    font-size: 1.25em;
+  }
+
+  .card-content h3 {
+    font-size: 0.9em;
+  }
+
+  .card-content h4 {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    border-radius: 0;
+  }
+
+  .card-content {
+    padding: 0.5em;
+  }
+
+  .card-content a {
+    font-size: 0.75em;
+    padding: 0.5em;
+  }
+
+  .card-content h2 {
+    font-size: 1.1em;
+  }
+
+  .card-content h3 {
+    font-size: 0.8em;
+  }
+
+  .card-content h4 {
+    font-size: 0.65em;
+  }
+}
