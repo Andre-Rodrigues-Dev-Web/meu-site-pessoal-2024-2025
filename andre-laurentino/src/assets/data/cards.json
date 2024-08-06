@@ -1,0 +1,42 @@
+[
+  {
+    "imageSrc": "../../../assets/imgs/icons/html.svg",
+    "title": "HTML",
+    "backgroundColor": "#ff5722"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/css.svg",
+    "title": "CSS",
+    "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/javascript.svg",
+    "title": "JavaScript",
+    "backgroundColor": "#ffc107"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/react.svg",
+    "title": "React",
+    "backgroundColor": "#2196F3"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/angular.svg",
+    "title": "Angular",
+    "backgroundColor": "#f44336"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/vue.svg",
+    "title": "VueJS",
+    "backgroundColor": "#4caf50"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/bootstrap.svg",
+    "title": "Bootstrap",
+    "backgroundColor": "#673ab7"
+  },
+  {
+    "imageSrc": "../../../assets/imgs/icons/nodejs.svg",
+    "title": "NodeJS",
+    "backgroundColor": "#4caf50"
+  }
+]
