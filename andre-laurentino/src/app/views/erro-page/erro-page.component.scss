@@ -1,0 +1,29 @@
+.content-erro{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  text-align: center;
+  h2{
+    font-size: 4em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  @media(min-width: 700px){
+    .text-content{
+      margin: 0 auto;
+      width: 800px;
+      h1{
+        font-size: 6em;
+      }
+      h2{
+        font-size: 3em;
+      }
+      p{
+        font-size: 1.5em;
+      }
+    }
+  }
+}

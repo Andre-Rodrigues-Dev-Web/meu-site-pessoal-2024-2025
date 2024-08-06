@@ -1,0 +1,60 @@
+.footer {
+  background-color: #000;
+  border-top: 1px solid #7e7e7e33;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .brand {
+      margin-bottom: 10px;
+
+      h2 {
+        margin: 0;
+        font-size: 1.5em;
+        color: #fff;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .author {
+      font-size: 0.875em;
+      color: #ffc107;
+    }
+  }
+}

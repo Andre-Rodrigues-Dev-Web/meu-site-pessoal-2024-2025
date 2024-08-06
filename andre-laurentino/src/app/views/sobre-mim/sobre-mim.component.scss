@@ -15,6 +15,10 @@
         width: 300px;
       }
     }
+    .container-text_about{
+      margin: 0 auto;
+      width: 80%;
+    }
     .container-text{
       h2{
         font-size: 2em;
@@ -31,6 +35,15 @@
           border-radius: 50%;
           height: 320px;
           width: 300px;
+        }
+      }
+      .container-text_about{
+        width: 740px;
+        h2{
+          font-size: 2em;
+        }
+        p{
+          margin-bottom: 20px;
         }
       }
       .container-text{
