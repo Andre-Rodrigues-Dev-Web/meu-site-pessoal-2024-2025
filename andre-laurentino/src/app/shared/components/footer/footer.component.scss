@@ -26,13 +26,11 @@
       margin-bottom: 10px;
 
       a {
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
         margin: 0 15px;
         text-decoration: none;
-        color: #fff;
-
-        &:hover {
-          text-decoration: underline;
-        }
       }
     }
 
