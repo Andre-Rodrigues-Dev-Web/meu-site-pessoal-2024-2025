@@ -24,6 +24,7 @@
       display: flex;
       justify-content: center;
       margin-bottom: 10px;
+      flex-wrap: wrap;
 
       a {
         color: #fff;
@@ -31,6 +32,7 @@
         font-weight: 600;
         margin: 0 15px;
         text-decoration: none;
+        padding: 5px 0;
       }
     }
 
@@ -54,5 +56,46 @@
       font-size: 0.875em;
       color: #ffc107;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer .brand,
+  .footer .links,
+  .footer .social,
+  .footer .author {
+    margin-bottom: 0;
+  }
+
+  .footer .links {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer .links {
+    flex-direction: column;
+  }
+
+  .footer .links a {
+    margin: 5px 0;
+  }
+
+  .footer .social {
+    flex-direction: column;
+  }
+
+  .footer .social a {
+    margin: 5px 0;
   }
 }
