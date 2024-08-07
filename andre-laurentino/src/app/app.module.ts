@@ -13,6 +13,8 @@ import { ErroPageComponent } from './views/erro-page/erro-page.component';
 import { SobreMimComponent } from './views/sobre-mim/sobre-mim.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './views/post/post.component';
+import { ServicosComponent } from './views/servicos/servicos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const sharedPages = [
   HomeComponent,
@@ -28,13 +30,15 @@ const sharedPages = [
     AppComponent,
     ...sharedPages,
     SobreMimComponent,
-    PostComponent
+    PostComponent,
+    ServicosComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
 ],
   providers: [],
   bootstrap: [AppComponent]

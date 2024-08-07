@@ -102,7 +102,7 @@ $desktop: 60em;
     }
   }
   &.color-menu {
-    background-color: #000;
+    background: linear-gradient(135deg, #1f1f1f 0%, #000 100%);
     .menu-container {
       .logo {
         h1 {

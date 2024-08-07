@@ -1,6 +1,8 @@
 .row{
-  flex-wrap: nowrap;
-  gap: 5px;
+  flex-wrap: wrap;
+  .col-4{
+    padding: 10px;
+  }
   @media(max-width: 700px){
     gap: 18px;
   }
@@ -8,10 +10,10 @@
 
 //Card
 .card {
-  background-color: #333;
+  background-color: #141414;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
