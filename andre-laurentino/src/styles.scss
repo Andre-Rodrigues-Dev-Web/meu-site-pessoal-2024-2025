@@ -85,7 +85,5 @@ $column-width: 100%;
 }
 
 //Menu
-.background-menu {
-  background-color: #000!important;
-  z-index: 100;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
