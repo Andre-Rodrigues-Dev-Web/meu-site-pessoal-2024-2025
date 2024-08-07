@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./servicos.component.scss']
 })
 export class ServicosComponent {
-  description = 'Ofereço uma ampla gama de serviços para atender todas as suas necessidades de tecnologia e design. Nossa equipe de especialistas está pronta para ajudá-lo a alcançar seus objetivos.';
+  description = 'Eu ofereço uma ampla gama de serviços personalizados para atender todas as suas necessidades de tecnologia e design. Com experiência em desenvolvimento web, design gráfico e otimização de SEO, estou aqui para garantir que seu projeto alcance seu pleno potencial. Desde a criação de sites responsivos até a implementação de soluções inovadoras, estou comprometido em entregar resultados que superem suas expectativas e ajudem você a atingir seus objetivos de forma eficaz.';
 
   services = [
     {
