@@ -8,6 +8,8 @@ import { PostService } from '../../services/post.service';
 })
 export class CardBlogComponent implements OnInit {
   posts: any[] = [];
+  currentPage: number = 1;
+  postsPerPage: number = 6;
 
   constructor(private postService: PostService) { }
 
@@ -15,5 +17,33 @@ export class CardBlogComponent implements OnInit {
     this.postService.getPosts().subscribe(data => {
       this.posts = data;
     });
+  }
+
+  get paginatedPosts() {
+    const startIndex = (this.currentPage - 1) * this.postsPerPage;
+    const endIndex = startIndex + this.postsPerPage;
+    return this.posts.slice(startIndex, endIndex);
+  }
+
+  totalPages() {
+    return Math.ceil(this.posts.length / this.postsPerPage);
+  }
+
+  changePage(page: number) {
+    if (page > 0 && page <= this.totalPages()) {
+      this.currentPage = page;
+    }
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage++;
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
   }
 }
