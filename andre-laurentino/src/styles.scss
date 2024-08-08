@@ -12,6 +12,9 @@ $tablet: 48em;
   a, a:hover{
     text-decoration: none;
   }
+  h1{
+    line-height: 0!important;
+  }
   li{
     list-style-type: none;
   }

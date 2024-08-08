@@ -9,6 +9,7 @@ import { PostService } from 'src/app/shared/services/post.service';
 })
 export class PostComponent implements OnInit {
   post: any;
+  posts: any[] = [];
   formattedContent: string = '';
 
   constructor(
@@ -19,6 +20,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.postService.getPosts().subscribe(data => {
+      this.posts = data;
       this.post = data.find((p: any) => p.slug === slug);
       if (this.post) {
         this.formattedContent = this.highlightCode(this.formatContent(this.post.content));
@@ -77,10 +79,9 @@ export class PostComponent implements OnInit {
     return formattedContent.trim();
   }
 
-  // Editor
   highlightCode(content: string): string {
     return content.replace(/<code>(.*?)<\/code>/gs, (match, p1) => {
-      const lines = p1.split('\n').map((line: string, index: number) => {
+      const lines = p1.split('\n').map((line: string) => {
         return `<span class="line"><span class="syntax">${this.highlightSyntax(line)}</span></span>`;
       }).join('\n');
       return `<div class="code-editor"><pre>${lines}</pre></div>`;
