@@ -135,7 +135,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     &:disabled {
-      background-color: #6c757d;
+      background-color: #1e1e1e;
+      color: #fff;
       cursor: not-allowed;
     }
     &:hover:not(:disabled) {
