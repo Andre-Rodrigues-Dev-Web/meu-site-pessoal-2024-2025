@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardBlogComponent } from './card-blog.component';
 import { RouterLink, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const sharedComponents = [
   CardBlogComponent
@@ -14,7 +15,8 @@ const sharedComponents = [
   imports: [
     CommonModule,
     RouterLink,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   exports: [
     ...sharedComponents
