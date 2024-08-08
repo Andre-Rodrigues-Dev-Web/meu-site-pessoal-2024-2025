@@ -1,13 +1,35 @@
 <div class="row">
-  <div class="col-4" *ngFor="let post of paginatedPosts">
+  <div class="col-12">
+    <div class="filter-container">
+      <input
+        list="postTitlesAndCategories"
+        [(ngModel)]="filterValue"
+        (input)="onFilterChange()"
+        placeholder="Pesquise por título ou categoria"
+        class="filter-input"
+      />
+      <datalist id="postTitlesAndCategories">
+        <option *ngFor="let post of posts" [value]="post.title"></option>
+        <option *ngFor="let post of posts" [value]="post.category"></option>
+      </datalist>
+    </div>
+  </div>
+</div>
+
+<div class="row" role="list">
+  <div class="col-4" *ngFor="let post of paginatedPosts" role="listitem">
     <div class="card">
       <img [src]="post.image" alt="{{ post.title }}" />
       <div class="card-content">
         <h2>{{ post.title }}</h2>
         <h3>Categoria: {{ post.category }}</h3>
-        <h4>Data de publicação: {{ post.dataPublish }}</h4>
+        <h4>Data de publicação: {{ post.dataPublish }}"></h4>
         <p>{{ post.description }}</p>
-        <a [routerLink]="['/post', post.slug]">Confira o post</a>
+        <a
+          [routerLink]="['/post', post.slug]"
+          [attr.aria-label]="'Leia mais sobre ' + post.title"
+          >Confira o post</a
+        >
       </div>
     </div>
   </div>
@@ -16,15 +38,28 @@
 <div class="row">
   <div class="col-12">
     <nav aria-label="Paginação de postagens" class="pagination">
-      <button (click)="previousPage()" [disabled]="currentPage === 1" [attr.aria-label]="'Página anterior'">Voltar</button>
+      <button
+        (click)="previousPage()"
+        [disabled]="currentPage === 1"
+        [attr.aria-label]="'Página anterior'"
+      >
+        Voltar
+      </button>
       <button
         *ngFor="let page of [].constructor(totalPages()); let i = index"
         (click)="changePage(i + 1)"
         [disabled]="currentPage === i + 1"
-        [attr.aria-label]="'Ir para a página ' + (i + 1)">
+        [attr.aria-label]="'Ir para a página ' + (i + 1)"
+      >
         {{ i + 1 }}
       </button>
-      <button (click)="nextPage()" [disabled]="currentPage === totalPages()" [attr.aria-label]="'Próxima página'">Avançar</button>
+      <button
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages()"
+        [attr.aria-label]="'Próxima página'"
+      >
+        Avançar
+      </button>
     </nav>
   </div>
 </div>

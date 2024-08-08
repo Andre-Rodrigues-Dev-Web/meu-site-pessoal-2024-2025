@@ -8,6 +8,8 @@ import { PostService } from '../../services/post.service';
 })
 export class CardBlogComponent implements OnInit {
   posts: any[] = [];
+  filteredPosts: any[] = [];
+  filterValue: string = '';
   currentPage: number = 1;
   postsPerPage: number = 6;
 
@@ -16,17 +18,27 @@ export class CardBlogComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getPosts().subscribe(data => {
       this.posts = data;
+      this.filteredPosts = data;
     });
+  }
+
+  onFilterChange() {
+    const filterValueLower = this.filterValue.toLowerCase();
+    this.filteredPosts = this.posts.filter(post =>
+      post.title.toLowerCase().includes(filterValueLower) ||
+      post.category.toLowerCase().includes(filterValueLower)
+    );
+    this.currentPage = 1;
   }
 
   get paginatedPosts() {
     const startIndex = (this.currentPage - 1) * this.postsPerPage;
     const endIndex = startIndex + this.postsPerPage;
-    return this.posts.slice(startIndex, endIndex);
+    return this.filteredPosts.slice(startIndex, endIndex);
   }
 
   totalPages() {
-    return Math.ceil(this.posts.length / this.postsPerPage);
+    return Math.ceil(this.filteredPosts.length / this.postsPerPage);
   }
 
   changePage(page: number) {

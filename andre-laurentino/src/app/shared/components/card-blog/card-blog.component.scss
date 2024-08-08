@@ -145,3 +145,35 @@
   }
 }
 
+//Datalist
+.filter-input {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 10px;
+  max-width: 500px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 10px 15px;
+
+  &:focus {
+    border-color: #e1b123;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #888;
+  }
+}
+
+datalist {
+  background-color: #1e1e1e;
+  color: #ffffff;
+
+  option {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+}
