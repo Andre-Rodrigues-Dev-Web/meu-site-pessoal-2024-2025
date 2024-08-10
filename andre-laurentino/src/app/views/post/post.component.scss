@@ -14,7 +14,7 @@
 
   h1 {
     font-size: 3em;
-    line-height: 45px;
+    line-height: 45px!important;
   }
   h2 {
     font-size: 2em;
@@ -42,16 +42,17 @@
     width: 80%;
     h1 {
       font-size: 3em;
-      line-height: 43px;
+      line-height: 43px!important;
     }
-    .content-text{
+    .content-text {
       width: 980px;
-      p{
+      p {
         margin-top: 30px;
       }
-      ol{
+      ol {
         margin-top: 20px;
       }
     }
   }
 }
+
